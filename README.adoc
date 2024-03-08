@@ -9,3 +9,18 @@
 Sample of project with Gradle 8.5 and jdk21.
 
 It can be used to test https://github.com/oss-review-toolkit/ort[ORT] 17 (or >)
+
+== Results
+
+=== With ORT 17 built & running with jdk17
+
+* link:ort-results/ort17-jdk17/analyzer-logs.txt[logs of analyzer]
+* link:ort-results/ort17-jdk17/analyzer-result.yml[analyzer report]
+* link:ort-results/ort17-jdk17/ORT_Scan_Report.html[ort webapp report]
+
+
+=== With ORT 17 built & running with jdk21
+
+* link:ort-results/ort17-jdk21/analyzer-logs.txt[logs of analyzer]
+* link:ort-results/ort17-jdk21/analyzer-result.yml[analyzer report]
+* link:ort-results/ort17-jdk21/ORT_Scan_Report.html[ort webapp report]

@@ -1,0 +1,189 @@
+---
+repository:
+  vcs:
+    type: "Git"
+    url: "https://github.com/fb33/sample-gradle8.5-jdk21.git"
+    revision: "1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c"
+    path: ""
+  vcs_processed:
+    type: "Git"
+    url: "https://github.com/fb33/sample-gradle8.5-jdk21.git"
+    revision: "1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c"
+    path: ""
+  config:
+    excludes:
+      paths:
+      - pattern: "**/package-lock.json"
+        reason: "TEST_OF"
+        comment: "This file don't have to be scanned."
+      - pattern: "**/yarn.lock"
+        reason: "TEST_OF"
+        comment: "This file don't have to be scanned."
+      - pattern: "package-lock.json"
+        reason: "TEST_OF"
+        comment: "This file don't have to be scanned."
+      - pattern: "yarn.lock"
+        reason: "TEST_OF"
+        comment: "This file don't have to be scanned."
+      - pattern: "**/*{a:[tT]}est{b:s?|[cC]ases?}/**"
+        reason: "TEST_OF"
+        comment: "This directory contains tests scripts which are not distributed."
+      - pattern: "*{a:[tT]}est{b:s?|[cC]ases?}/**"
+        reason: "TEST_OF"
+        comment: "This directory contains tests scripts which are not distributed."
+      - pattern: "**/*{a:[tT]}est{b:s?|[cC]ases?}.*"
+        reason: "TEST_OF"
+        comment: "This directory contains tests scripts which are not distributed."
+      - pattern: "**/*_TEST.*"
+        reason: "TEST_OF"
+        comment: "This directory contains tests scripts which are not distributed."
+      scopes:
+      - pattern: "provided"
+        reason: "PROVIDED_DEPENDENCY_OF"
+        comment: "Packages provided at runtime by the JDK or container only."
+      - pattern: "test"
+        reason: "TEST_DEPENDENCY_OF"
+        comment: "Packages for testing only."
+      - pattern: "test.*"
+        reason: "TEST_DEPENDENCY_OF"
+        comment: "Packages for testing only."
+      - pattern: ".*test.*"
+        reason: "TEST_DEPENDENCY_OF"
+        comment: "Packages for testing only."
+      - pattern: "jacoco.*"
+        reason: "TEST_DEPENDENCY_OF"
+        comment: "Packages for testing only."
+      - pattern: "kotlin.*"
+        reason: "BUILD_DEPENDENCY_OF"
+        comment: "Packages for plugin kotlin compiler only."
+      - pattern: "devDependencies"
+        reason: "DEV_DEPENDENCY_OF"
+        comment: "Packages for development only."
+      - pattern: "vendor"
+        reason: "DEV_DEPENDENCY_OF"
+        comment: "Packages to build and test the main module."
+    resolutions:
+      issues:
+      - message: "^Could not download 'Maven:com.lectra.*$"
+        reason: "BUILD_TOOL_ISSUE"
+        comment: "Source du projet non dispo dans artifactory"
+      - message: "^The declared license 'Lectra' could not be mapped to a valid license\
+          \ or parsed as an SPDX expression"
+        reason: "SCANNER_ISSUE"
+        comment: "License Lectra"
+analyzer:
+  start_time: "2024-03-08T08:54:59.366913938Z"
+  end_time: "2024-03-08T08:56:13.940612768Z"
+  environment:
+    ort_version: "17.0.1"
+    java_version: "17.0.10"
+    os: "Linux"
+    processors: 3
+    max_memory: 10737418240
+    variables:
+      HOME: "/home/ort"
+      JAVA_HOME: "/opt/java/openjdk"
+    tool_versions: {}
+  config:
+    allow_dynamic_versions: true
+    enabled_package_managers:
+    - "Bower"
+    - "Composer"
+    - "Conan"
+    - "GoDep"
+    - "GoMod"
+    - "Gradle"
+    - "Maven"
+    - "NPM"
+    - "NuGet"
+    - "PIP"
+    - "Pipenv"
+    - "PNPM"
+    - "Poetry"
+    - "SBT"
+    - "SpdxDocumentFile"
+    - "Unmanaged"
+    - "Yarn"
+    - "Yarn2"
+    disabled_package_managers:
+    - "Bundler"
+    - "Cargo"
+    - "Carthage"
+    - "CocoaPods"
+    - "GradleInspector"
+    - "Pub"
+    - "Stack"
+    - "SwiftPM"
+    package_managers:
+      PIP:
+        options:
+          pythonVersion: "3.10"
+      NPM:
+        options:
+          legacyPeerDeps: "true"
+      Yarn2:
+        options:
+          disableRegistryCertificateVerification: "false"
+    skip_excluded: true
+  result:
+    projects:
+    - id: "Gradle::build.gradle.kts:"
+      definition_file_path: "build.gradle.kts"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/fb33/sample-gradle8.5-jdk21.git"
+        revision: "1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c"
+        path: ""
+      homepage_url: ""
+      scope_names: []
+    packages: []
+    issues:
+      'Gradle::build.gradle.kts:':
+      - timestamp: "2024-03-08T08:56:13.885572567Z"
+        source: "Gradle"
+        message: "Gradle failed to resolve dependencies for path 'build.gradle.kts':\
+          \ BuildException: Could not fetch model of type 'OrtDependencyTreeModel'\
+          \ using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.5-bin.zip'.\n\
+          Caused by: MultipleBuildFailures: Build completed with 2 failures.\n   \
+          \ Caused by: LocationAwareException: A problem occurred configuring root\
+          \ project 'sample-gradle8.5-jdk21'.\n        Caused by: ProjectConfigurationException:\
+          \ A problem occurred configuring root project 'sample-gradle8.5-jdk21'.\n\
+          \            Caused by: PropertyQueryException: Failed to calculate the\
+          \ value of task ':compileJava' property 'javaCompiler'.\n              \
+          \  Caused by: NoToolchainAvailableException: No matching toolchains found\
+          \ for requested specification: {languageVersion=21, vendor=any, implementation=vendor-specific}\
+          \ for LINUX on x86_64.\n                    Caused by: ToolchainDownloadFailedException:\
+          \ No locally installed toolchains match and toolchain download repositories\
+          \ have not been configured."
+        severity: "ERROR"
+    dependency_graphs:
+      Gradle:
+        nodes: []
+        edges: []
+scanner: null
+advisor: null
+evaluator: null
+resolved_configuration:
+  package_curations:
+  - provider:
+      id: "DefaultFile"
+    curations: []
+  - provider:
+      id: "DefaultDir"
+    curations: []
+  - provider:
+      id: "lectraCuration"
+    curations: []
+  - provider:
+      id: "ortCuration"
+    curations: []
+  - provider:
+      id: "OrtConfig"
+    curations: []

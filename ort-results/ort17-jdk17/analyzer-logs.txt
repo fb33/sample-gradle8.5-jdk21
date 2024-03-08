@@ -1,0 +1,62 @@
+09:56:42   ______________________________
+09:56:42  /        \_______   \__    ___/ The OSS Review Toolkit, version 17.0.1.
+09:56:42  |    |   | |       _/ |    |
+09:56:42  |    |   | |    |   \ |    |    Running 'scan' as 'ort' under Java 17.0.10 on L
+09:56:42  \________/ |____|___/ |____|    with 3 CPUs and a maximum of 10240 MiB of memor
+09:56:42
+09:56:42  Environment variables:
+09:56:42  ORT_CONFIG_DIR = /home/ort/.ort/config
+09:56:42  ORT_DATA_DIR = /home/ort/.ort
+09:56:42  HOME = /home/ort
+09:56:42  JAVA_HOME = /opt/java/openjdk
+09:56:42
+09:56:42  Looking for ORT configuration in the following file:
+09:56:42          /project/ort.yml
+09:56:42
+09:56:42  Scanning projects with:
+09:56:42  08:56:42.478 [main] INFO  org.ossreviewtoolkit.utils.common.ProcessCapture - Running 'scancode --version' in '/home/jenkins/agent/workspace/tools/Test-Audit-FOSS/project'...
+09:56:43          ScanCode (version 32.0.8)
+09:56:43  Packages will not be scanned.
+09:56:43  08:56:43.812 [main] INFO  org.ossreviewtoolkit.scanner.ScanStorages - Using the following provenance storages: [PostgresPackageProvenanceStorage, PostgresNestedProvenanceStorage]
+09:56:43  08:56:43.812 [main] INFO  org.ossreviewtoolkit.scanner.ScanStorages - Using the following scan storages for reading results: [ProvenanceBasedPostgresStorage]
+09:56:43  08:56:43.813 [main] INFO  org.ossreviewtoolkit.scanner.ScanStorages - Using the following scan storages for writing results: [ProvenanceBasedPostgresStorage]
+09:56:44  08:56:44.688 [main] INFO  org.ossreviewtoolkit.plugins.commands.api.utils.ExtensionsKt - Read ORT result from 'analyzer-result.yml' (0.02 MiB) in 846.387080ms.
+09:56:44  08:56:44.733 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Scanning 1 PROJECT(s) with 1 scanner(s).
+09:56:44  08:56:44.735 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Resolving provenance for 1 package(s).
+09:56:44  08:56:44.769 [DefaultDispatcher-worker-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:56:45  08:56:45.520 [DefaultDispatcher-worker-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c718061
+09:56:45  08:56:45.521 [DefaultDispatcher-worker-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:56:46  08:56:45.904 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.scanner.provenance.DefaultPackageProvenanceResolver - Could not find a stored repository resolution result for package 'Gradle::build.gradle.kts:', attempting resolution.
+09:56:46  08:56:46.033 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.utils.ort.OrtProxySelector - Proxy selector was successfully installed.
+09:56:46  08:56:46.048 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.utils.ort.OrtAuthenticator - Authenticator was successfully installed.
+09:56:46  08:56:46.212 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.downloader.VersionControlSystem - No Git revision for package 'build.gradle.kts' and version '' found: IOException: Cannot guess a revision name from a blank version.
+09:56:46  08:56:46.753 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.downloader.VersionControlSystem - Adding Git fixed revision '1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c' (taken from package metadata) as a candidate.
+09:56:46  08:56:46.757 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.scanner.provenance.DefaultPackageProvenanceResolver - Trying revision candidate '1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c' (1 of 1).
+09:56:46  08:56:46.764 [DefaultDispatcher-worker-3] INFO  org.eclipse.jgit.lib.Repository - Updating working tree from https://github.com/fb33/sample-gradle8.5-jdk21.git.
+09:56:46  08:56:46.765 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.plugins.versioncontrolsystems.git.Git - Trying to fetch only revision '1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c' with depth limited to 50.
+09:56:51  08:56:50.378 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.utils.common.ProcessCapture - Running 'git checkout 1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c' in '/tmp/ort-DefaultWorkingTreeCache13230277900597977845'...
+09:56:51  08:56:50.669 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.scanner.provenance.DefaultPackageProvenanceResolver - Resolved revision for package 'Gradle::build.gradle.kts:' to 1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c based on guessed revision 1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c.
+09:56:51  08:56:51.129 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Resolved provenance for 1 package(s) in 6.391479986s.
+09:56:51  08:56:51.131 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Resolving nested provenances for 1 package(s).
+09:56:51  08:56:51.395 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.scanner.provenance.DefaultNestedProvenanceResolver - Found a stored nested provenance for RepositoryProvenance(vcsInfo=VcsInfo(type=Git, url=https://github.com/fb33/sample-gradle8.5-jdk21.git, revision=1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c, path=), resolvedRevision=1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c) with only fixed revisions, skipping resolution.
+09:56:51  08:56:51.397 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Resolved nested provenance for 1 package(s) in 265.304506ms.
+09:56:51  08:56:51.401 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Reading stored scan results for 1 package(s) with 1 provenance(s).
+09:56:51  08:56:51.654 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Read the following stored scan result(s) in 251.834638ms:
+09:56:51  08:56:51.655 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - 	ScanCode: Result(s) for 1 of 1 provenance(s).
+09:56:51  08:56:51.657 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Scanning RepositoryProvenance(vcsInfo=VcsInfo(type=Git, url=https://github.com/fb33/sample-gradle8.5-jdk21.git, revision=1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c, path=), resolvedRevision=1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c) (1 of 1)...
+09:56:51  08:56:51.659 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Skipping RepositoryProvenance(vcsInfo=VcsInfo(type=Git, url=https://github.com/fb33/sample-gradle8.5-jdk21.git, revision=1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c, path=), resolvedRevision=1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c) (1 of 1) as all scanners have results.
+09:56:51  08:56:51.661 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Creating file lists for 1 provenances.
+09:56:51  08:56:51.664 [DefaultDispatcher-worker-3] INFO  kotlinx.coroutines.CoroutineScope - Creating file list for provenance 1 of 1.
+09:56:51  08:56:51.674 [DefaultDispatcher-worker-3] ERROR org.ossreviewtoolkit.model.utils.FileProvenanceFileStorage - Could not read from dd453cda96025cea130b857d44506b40238f7855/file_list: FileNotFoundException: /home/ort/.ort/scanner/file-lists/dd453cda96025cea130b857d44506b40238f7855/file_list (No such file or directory)
+09:56:51  Caused by: FileNotFoundException: /home/ort/.ort/scanner/file-lists/dd453cda96025cea130b857d44506b40238f7855/file_list.xz (No such file or directory)
+09:56:51  08:56:51.679 [DefaultDispatcher-worker-3] INFO  org.eclipse.jgit.lib.Repository - Updating working tree from https://github.com/fb33/sample-gradle8.5-jdk21.git.
+09:56:51  08:56:51.679 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.plugins.versioncontrolsystems.git.Git - Trying to fetch only revision '1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c' with depth limited to 50.
+09:56:52  08:56:52.126 [DefaultDispatcher-worker-3] INFO  org.ossreviewtoolkit.utils.common.ProcessCapture - Running 'git checkout 1c17cfe70f0a1dd41878c7fa2283fab87b7cb51c' in '/tmp/ort-DefaultWorkingTreeCache13230277900597977845'...
+09:56:52  08:56:52.636 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Created file lists for 1 provenances in 973.033765ms.
+09:56:53  08:56:52.918 [main] INFO  org.ossreviewtoolkit.scanner.Scanner - Skipping PACKAGE scan as no according scanner is configured.
+09:56:53  08:56:52.923 [main] INFO  org.ossreviewtoolkit.utils.common.ProcessCapture - Running 'scancode --version' in '/home/jenkins/agent/workspace/tools/Test-Audit-FOSS/project'...
+09:56:54  Writing scan result to '/project/reports/scanner/scan-result.json'.
+09:56:54  08:56:54.659 [main] INFO  org.ossreviewtoolkit.plugins.commands.api.utils.ExtensionsKt - Wrote ORT result to 'scan-result.json' (0.03 MiB) in 312.231985ms.
+09:56:54  The scan took 8.200493057s.
+09:56:54  Resolved issues: 0 errors, 0 warnings, 0 hints.
+09:56:54  Unresolved issues: 0 errors, 0 warnings, 0 hints.
