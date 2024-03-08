@@ -1,0 +1,14 @@
+*.env
+*.iml
+.DS_Store
+.idea
+.gradle
+gradle/wrapper/gradle-wrapper.jar
+build
+target
+out
+.env
+.scannerwork/
+*.log
+output.json
+.sdkmanrc

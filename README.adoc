@@ -1,0 +1,11 @@
+= Sample
+:toc: left
+:toclevels: 5
+:numbered:
+:linkattrs:
+:source-highlighter: highlightjs
+:icons: font
+
+Sample of project with Gradle 8.5 and jdk21.
+
+It can be used to test https://github.com/oss-review-toolkit/ort[ORT] 17 (or >)

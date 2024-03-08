@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: sample
+
+app:
+  version:
+    number: \@version\@
